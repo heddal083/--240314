@@ -54,6 +54,7 @@ body::before{
     font-size:1rem;
     color:#d0d0d0;
     animation:bannerScroll 8s linear infinite;
+    font-family:'Song Myung', serif;
     text-shadow:
         0 0 5px rgba(255,255,255,.4),
         0 0 15px rgba(255,255,255,.1);

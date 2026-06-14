@@ -89,6 +89,61 @@ body::before{
     animation:fadeIn 1.5s;
 }
     
+.loading-screen{
+    text-align:center;
+}
+
+.loading-bar{
+    width:300px;
+    height:20px;
+    border:1px solid #555;
+    margin:20px auto;
+}
+
+.progress{
+    width:0%;
+    height:100%;
+    background:#777;
+}
+
+.main-header{
+    padding:20px;
+    border-bottom:1px solid #222;
+    text-align:center;
+}
+
+.main-header nav a{
+    color:#ccc;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+.hero{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    width:250px;
+    border:1px solid #222;
+    padding:20px;
+    background:#050505;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#555;
+}
+    
 .logo{
     letter-spacing:10px;
     text-shadow:
@@ -273,9 +328,94 @@ function nextStep(){
 
         if(value === "240314"){
 
-            document.body.innerHTML = `
-            <div class="container">
-                <div class="logo">인증 완료</div>
+    document.body.innerHTML = `
+    <div class="loading-screen">
+        <h1>청송 중앙망 접속 중...</h1>
+
+        <div class="loading-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <p id="percent">0%</p>
+        <p>내부 기록 동기화 중...</p>
+    </div>
+    `;
+
+    let width = 0;
+
+    const interval = setInterval(() => {
+
+        width++;
+
+        document.getElementById("progress").style.width = width + "%";
+        document.getElementById("percent").innerText = width + "%";
+
+        if(width >= 100){
+
+            clearInterval(interval);
+
+            showHomepage();
+        }
+
+    },30);
+}
+            function showHomepage(){
+
+document.body.innerHTML = `
+
+<header class="main-header">
+
+    <div class="company-name">
+        (주)청송
+    </div>
+
+    <nav>
+        <a href="#">회사소개</a>
+        <a href="#">계열사</a>
+        <a href="#">연구사업</a>
+        <a href="#">보존기록</a>
+        <a href="#">내부망</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <h1>청송은 미래를 기록합니다.</h1>
+
+    <p>
+    1997년 설립 이후 청송은
+    보존·분석·관찰 기술을 연구하며
+    지속 가능한 정보 관리 체계를 구축하고 있습니다.
+    </p>
+
+</section>
+
+<section class="cards">
+
+    <div class="card">
+        <h2>연구사업</h2>
+        <p>관찰 및 분석 시스템 개발</p>
+    </div>
+
+    <div class="card">
+        <h2>계열사</h2>
+        <p>청송정보통신<br>청송물산<br>청송연구원</p>
+    </div>
+
+    <div class="card">
+        <h2>공지사항</h2>
+        <p>제11차 기록보존규약 개정</p>
+    </div>
+
+</section>
+
+<footer>
+    모든 기록은 보존됩니다.
+</footer>
+
+`;
+}
 
                 <div class="message">
                     ㈜청송 내부망 접속이 허가되었습니다.

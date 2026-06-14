@@ -318,59 +318,47 @@ function nextStep(){
         }
     }
 }
-function showHomepage(){
-document.body.innerHTML=`
-<div class="homepage">
-<header class="main-header">
-<div class="company-name">(주)청송</div>
-<nav>
-<a href="#">회사소개</a>
-<a href="#">계열사</a>
-<a href="#">연구사업</a>
-<a href="#">보존기록</a>
-<a href="#">내부망</a>
-</nav>
-</header>
-<section class="hero">
-<h1>청송은 미래를 기록합니다.</h1>
-<p>
-청송은 정보 보존, 분석 및 연구를 기반으로
-다양한 분야의 데이터 관리 체계를 구축하고 있습니다.
-<br><br>
-기록은 자산이며,
-보존은 곧 미래를 위한 투자입니다.
-</p>
-</section>
-<section class="cards">
-<div class="card">
-<h2>연구사업</h2>
-<p>
-정보 분석 연구<br>
-기록 보존 기술<br>
-관찰 시스템 개발
-</p>
-</div>
-<div class="card">
-<h2>계열사</h2>
-<p>
-청송정보통신<br>
-청송물산<br>
-청송연구원
-</p>
-</div>
-<div class="card">
-<h2>공지사항</h2>
-<p>
-제11차 기록보존규약 개정<br>
-2026.06.14
-</p>
-</div>
-</section>
-<footer>
-모든 기록은 보존됩니다.
-</footer>
-</div>
-`;
+else if(step===3){
+        if(value==="240314"){
+            document.body.innerHTML=`
+            <div class="loading-screen">
+                <h1>청송 중앙망 접속 중...</h1>
+                <div class="loading-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <p id="percent">0%</p>
+                <p>내부 기록 동기화 중...</p>
+            </div>
+            `;
+            let width=0;
+            const interval=setInterval(()=>{
+                width++;
+                document.getElementById("progress").style.width=width+"%";
+                document.getElementById("percent").innerText=width+"%";
+                if(width>=100){
+                    clearInterval(interval);
+                    showHomepage();
+                }
+            },25);
+        }else{
+            document.body.innerHTML=`
+            <div class="container">
+                <div class="logo red">오류</div>
+                <div class="message red">
+                인증되지 않은 접근이 감지되었습니다.
+                <br><br>
+                세션이 기록되었습니다.
+                </div>
+                <div class="footer">
+                SYSTEM LOG CREATED
+                </div>
+            </div>
+            `;
+            setTimeout(()=>{
+                location.reload();
+            },3000);
+        }
+    }
 }
 </script>
 </body>

@@ -1,7 +1,8 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>(주)청송 임직원 인증 시스템</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
@@ -14,6 +15,12 @@
 }
 
 body{
+    min-height:100vh;
+    min-height:100dvh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
     background:#000;
     color:#d8d8d8;
     font-family:'Song Myung', serif;
@@ -39,8 +46,10 @@ body::before{
 }
 
 .container{
+    width:90%;
+    max-width:360px;
+    padding:20px;
     text-align:center;
-    width:600px;
     animation:fadeIn 1.5s;
 }
 
@@ -52,13 +61,18 @@ body::before{
 }
 
 .message{
-    font-size:2rem;
+    font-size:1.4rem;
+    line-height:1.6;
+    margin-bottom:25px;
     margin-bottom:30px;
     min-height:80px;
 }
 
 input{
-    width:350px;
+    width:100%;
+    max-width:320px;
+    padding:16px;
+    font-size:16px;
     padding:15px;
     background:#050505;
     border:1px solid #444;
@@ -75,13 +89,15 @@ input:focus{
 }
 
 button{
-    margin-top:20px;
-    padding:12px 40px;
+    width:100%;
+    max-width:320px;
+    padding:15px;
+    margin-top:15px;
+    font-size:1rem;
     background:#111;
     color:#ccc;
     border:1px solid #555;
     cursor:pointer;
-    font-size:1rem;
 }
 
 button:hover{

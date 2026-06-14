@@ -17,12 +17,7 @@
 body{
     background:#000;
     color:#d8d8d8;
-    height:100vh;
-    overflow:hidden;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-family:'Creepster', cursive;
+    font-family:'Song Myung', serif;
 }
 
 /* 노이즈 효과 */
@@ -51,12 +46,10 @@ body::before{
 }
 
 .logo{
-    font-size:3rem;
-    margin-bottom:40px;
-    letter-spacing:4px;
+    letter-spacing:10px;
     text-shadow:
-    0 0 5px #fff,
-    0 0 20px #888;
+    0 0 5px rgba(255,255,255,.3),
+    0 0 20px rgba(255,255,255,.1);
 }
 
 .message{

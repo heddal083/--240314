@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -85,6 +84,7 @@ body::before{
     line-height:1.7;
     margin-bottom:25px;
     min-height:100px;
+    font-family:'Song Myung', serif;
 }
 input{
     width:100%;

@@ -75,6 +75,7 @@ body::before{
     font-size:2.3rem;
     margin-bottom:30px;
     letter-spacing:6px;
+    font-family:'Song Myung', serif;
     text-shadow:
         0 0 5px rgba(255,255,255,.25),
         0 0 20px rgba(255,255,255,.08);

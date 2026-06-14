@@ -14,12 +14,6 @@ content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     box-sizing:border-box;
 }
 
-<div class="top-banner">
-    <div class="banner-track">
-        ☢ 청송그룹에 오신 것을 환영합니다 =) ☢ 청송그룹에 오신 것을 환영합니다 =) ☢ 청송그룹에 오신 것을 환영합니다 =) ☢ 청송그룹에 오신 것을 환영합니다 =)
-    </div>
-</div>
-
 .top-banner{
     position:fixed;
     top:0;
@@ -36,12 +30,14 @@ content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     position:absolute;
     white-space:nowrap;
     line-height:50px;
-    font-size:1.1rem;
+    font-size:1.3rem;
+    letter-spacing:2px;
     color:#d0d0d0;
     text-shadow:
-        0 0 5px rgba(255,255,255,.3),
-        0 0 15px rgba(255,255,255,.1);
-    animation:bannerScroll 12s linear infinite;
+        0 0 10px #fff,
+        0 0 20px #999,
+        0 0 30px #555;
+    animation:bannerScroll 6s linear infinite;
 }
 
 @keyframes bannerScroll{
@@ -186,6 +182,12 @@ button:hover{
 </style>
 </head>
 <body>
+
+<div class="top-banner">
+    <div class="banner-track">
+        ☢ 청송그룹에 오신 것을 환영합니다 =) ☢ 청송그룹에 오신 것을 환영합니다 =) ☢ 청송그룹에 오신 것을 환영합니다 =) ☢ 청송그룹에 오신 것을 환영합니다 =)
+    </div>
+</div>
 
 <div class="container" id="container">
 

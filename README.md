@@ -3,7 +3,8 @@
 <meta charset="UTF-8">
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>(주)청송 임직원 인증 시스템</title>
+<title>(주)청송</title>
+<meta name="apple-mobile-web-app-title" content="(주)청송">
 
 <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
 

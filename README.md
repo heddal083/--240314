@@ -14,6 +14,45 @@ content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     box-sizing:border-box;
 }
 
+<div class="top-banner">
+    <div class="banner-track">
+        ☢ 청송그룹에 오신 것을 환영합니다 =) ☢ 청송그룹에 오신 것을 환영합니다 =) ☢ 청송그룹에 오신 것을 환영합니다 =) ☢ 청송그룹에 오신 것을 환영합니다 =)
+    </div>
+</div>
+
+.top-banner{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:50px;
+    background:#050505;
+    border-bottom:1px solid #222;
+    overflow:hidden;
+    z-index:9999;
+}
+
+.banner-track{
+    position:absolute;
+    white-space:nowrap;
+    line-height:50px;
+    font-size:1.1rem;
+    color:#d0d0d0;
+    text-shadow:
+        0 0 5px rgba(255,255,255,.3),
+        0 0 15px rgba(255,255,255,.1);
+    animation:bannerScroll 12s linear infinite;
+}
+
+@keyframes bannerScroll{
+    from{
+        transform:translateX(100%);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+
 body{
     min-height:100vh;
     min-height:100dvh;
@@ -21,6 +60,7 @@ body{
     justify-content:center;
     align-items:center;
     padding:20px;
+    padding-top:50px;
     background:#000;
     color:#d8d8d8;
     font-family:'Song Myung', serif;
@@ -52,7 +92,7 @@ body::before{
     text-align:center;
     animation:fadeIn 1.5s;
 }
-
+    
 .logo{
     letter-spacing:10px;
     text-shadow:
